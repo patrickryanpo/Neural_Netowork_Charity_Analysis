@@ -10,7 +10,7 @@ A charitable organization called Alphabet Soup is seeking to create an analysis 
 ### Data Preprocessing
 - The dataset provided included information on, success of the project, application type, affiliation, classification, use case, organization type, status of project, income amount, special considerations, and amount ask. 
 
-![AlphabetSoup Dataframe]()
+![AlphabetSoup Dataframe](https://github.com/patrickryanpo/Neural_Network_Charity_Analysis/blob/main/Resources/dataframe.png)
 
 - Due to the nature of the analysis, both EIN and NAME columns were dropped as they do not impact our analysis. 
 - The target model was the column: "IS_SUCCESSFUL"
@@ -22,34 +22,34 @@ Preparing the Data for Training:
 
 - Then we used the encoding method to conert categorical columns into numerical values, which allows our model to recognize the data. 
 
-![MergedandEncoded]()
+![MergedandEncoded](https://github.com/patrickryanpo/Neural_Network_Charity_Analysis/blob/main/Resources/mergedEncodedDF.png)
 
 - Then we split the data set by creating training and testing values. After which, we scaled out data using the StandardScaler().
 
 ### Compiling, Training, and Evaluating
 
 **Attempt 1**
-![DensityChart1]()
+![DensityChart1](https://github.com/patrickryanpo/Neural_Network_Charity_Analysis/blob/main/Resources/Summary1.png)
 
 In our first attempt, we had three hidden layers with activation relu, relu, and sigmoid. Our hidden layers had neurons of 200, 50, and 20, respectively. 200 Epochs was run in this optimization attempt. 
 
-![Optimization Attempt1]()
+![Optimization Attempt1](https://github.com/patrickryanpo/Neural_Network_Charity_Analysis/blob/main/Resources/optimizationAttempt1.png)
 
 As seen above, our first attempt reached an accuracy of 72.23%. 
 
 **Attempt 2**
 
-![DensityChart2]()
+![DensityChart2](https://github.com/patrickryanpo/Neural_Network_Charity_Analysis/blob/main/Resources/Summary2.png)
 
 In our second attempt, we kept the number of hidden layers as it was in attempt 1 but changed our activation sequence to all relus. Also, we changed the number of neurons to 200, 75, and 30. Ran the model with w00 epochs. 
 
-![OptimizationChart2]()
+![OptimizationChart2](https://github.com/patrickryanpo/Neural_Network_Charity_Analysis/blob/main/Resources/optimizationAttempt2.png)
 
 Our model produced lower result accuracy of 71.79%.
 
 **Attempt 3**
 
-![DensityChart3]()
+![DensityChart3](https://github.com/patrickryanpo/Neural_Network_Charity_Analysis/blob/main/Resources/Summary3.png)
 
 In our third attempt, we added another hidden layer, which increased our number of layers to 4. Our activation sequence was relu, tanh, sigmoid, sigmoid with values of 250, 150, 30, 20, respectively. The number of epochs run was kept similar to attempt 2 at 150. 
 
@@ -59,11 +59,11 @@ This model produced better results than attempt number 2, however, was lower tha
 
 **Attempt 4**
 
-![DensityChart4]()
+![DensityChart4](https://github.com/patrickryanpo/Neural_Network_Charity_Analysis/blob/main/Resources/Summary4.png)
 
 In our final attempt, we used the combination of relu, relu, tanh, sigmoid with values of 200, 150, 30, 20, respectively. This attempt was run at 200 epochs.
 
-![OptimizationChart4]()
+![OptimizationChart4](https://github.com/patrickryanpo/Neural_Network_Charity_Analysis/blob/main/Resources/optimizationAttempt4.png)
 
 This model produced an accuracy score of 72.14%, which was higher than the previous two attempts but did not reach 75%. 
 
