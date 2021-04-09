@@ -53,7 +53,7 @@ Our model produced lower result accuracy of 71.79%.
 
 In our third attempt, we added another hidden layer, which increased our number of layers to 4. Our activation sequence was relu, tanh, sigmoid, sigmoid with values of 250, 150, 30, 20, respectively. The number of epochs run was kept similar to attempt 2 at 150. 
 
-![OptimizationChart3]()
+![OptimizationChart3](https://github.com/patrickryanpo/Neural_Network_Charity_Analysis/blob/main/Resources/OptimizationAttempt3.png)
 
 This model produced better results than attempt number 2, however, was lower than our first attempt. The accuracy of this model was at 72.02%. 
 
